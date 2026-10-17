@@ -1,0 +1,29 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Slime Bakery – MA2T Games</title>
+<meta name="description" content="Slime Bakery : fusionne des slimes mignons, cuisine des pâtisseries et explore 18 mondes. Gratuit sur l'App Store et Google Play.">
+<meta property="og:title" content="Slime Bakery"><meta property="og:description" content="Merge cute slimes, bake treats, explore 18 worlds. Free on iPhone and Android.">
+<meta property="og:image" content="https://ma2tgames.github.io/slime-bakery/icon.png">
+<style>
+:root{--ink:#4A2A2E;--pink:#FF5C80;--bg1:#FFF4F8;--bg2:#FFD3E0}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% 30%,var(--bg1),var(--bg2));display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px 16px;text-align:center}
+main{max-width:420px;width:100%}
+img{width:140px;height:140px;border-radius:32px;box-shadow:0 10px 0 rgba(74,42,46,.15),0 0 0 6px #fff}
+h1{font-size:40px;margin:22px 0 6px;color:var(--pink)}p{margin:0 0 22px;font-weight:600}
+a.b{display:block;margin:12px 0;padding:16px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;font-size:18px;text-decoration:none}
+a.b.pl{background:var(--pink)}small{display:block;margin-top:22px;opacity:.7}small a{color:inherit}
+</style></head><body><main>
+<img src="icon.png" alt="Slime Bakery">
+<h1>Slime Bakery</h1>
+<p id="tag">Fusionne · Cuisine · Collectionne — Gratuit</p>
+<a class="b" id="ios" href="https://apps.apple.com/app/id6817373252">App Store (iPhone, iPad)</a>
+<a class="b pl" id="and" href="https://play.google.com/store/apps/details?id=com.ma2tgames.slimebakery">Google Play (Android)</a>
+<small>MA2T Games · <a href="privacy.html">Confidentialité / Privacy</a></small>
+</main>
+<script>
+// envoie directement vers le bon store selon le téléphone ; sur ordinateur, on affiche les deux boutons
+(function(){ var u=navigator.userAgent||"", ios=/iPhone|iPad|iPod/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1), and=/Android/.test(u);
+  if(!/^fr/i.test(navigator.language||"")) document.getElementById("tag").textContent="Merge · Bake · Collect — Free";
+  var t=ios?document.getElementById("ios").href:and?document.getElementById("and").href:null;
+  if(t && !/[?&]stay/.test(location.search)) location.replace(t); })();
+</script></body></html>
